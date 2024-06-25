@@ -25,7 +25,7 @@ export async function middleware(req: NextRequest) {
     };
   };
 
-  // if not authenticated and path is internal dashboard then redirect to /signin
+  // if not authenticated and path is internal home then redirect to /signin
   if (!token?.email && path !== "/signin") {
     const loginURL = new URL("/signin", req.url);
     if (path !== "/") {
@@ -34,10 +34,10 @@ export async function middleware(req: NextRequest) {
     return NextResponse.redirect(loginURL);
   }
 
-  // if authenticated and path is /signin then redirect to /dashboard
+  // if authenticated and path is /signin then redirect to /home
   if (token?.email && path === "/signin") {
-    const dashboardURL = new URL("/home", req.url);
-    return NextResponse.redirect(dashboardURL);
+    const homeURL = new URL("/home", req.url);
+    return NextResponse.redirect(homeURL);
   }
 
   return NextResponse.next();
