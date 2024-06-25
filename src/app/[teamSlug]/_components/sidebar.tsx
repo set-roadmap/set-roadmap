@@ -9,9 +9,10 @@ import {
   AvatarFallback,
   AvatarImage,
 } from "@/components/primitives/avatar";
+import { Button } from "@/components/primitives/button";
 import { headingFont } from "@/lib/heading-font";
 import { cn } from "@/lib/utils";
-import { FaExchangeAlt, FaSuperpowers } from "react-icons/fa";
+import { FaExchangeAlt, FaPuzzlePiece, FaSuperpowers } from "react-icons/fa";
 import { IoSettingsOutline } from "react-icons/io5";
 import { LiaUserFriendsSolid } from "react-icons/lia";
 import { LuBarChartHorizontalBig } from "react-icons/lu";
@@ -45,6 +46,11 @@ export default function Sidebar() {
               Team
             </div>
 
+            <div className="w-full px-2 py-2.5 rounded-lg flex items-center gap-2 hover:bg-muted-foreground/15 hover:cursor-pointer">
+              <FaPuzzlePiece className="h-5 w-5" />
+              Integrations
+            </div>
+
             <Accordion type="single" collapsible>
               <AccordionItem value="Community">
                 <AccordionTrigger className="w-full px-2 py-2.5 rounded-lg hover:bg-muted-foreground/15 hover:cursor-pointer">
@@ -54,14 +60,20 @@ export default function Sidebar() {
                   </div>
                 </AccordionTrigger>
                 <AccordionContent className="space-y-2 px-4 py-2">
-                  <div className="w-full px-2 py-2.5 rounded-lg flex items-center gap-2 hover:bg-muted-foreground/15 hover:cursor-pointer">
+                  <Button
+                    variant={"ghost"}
+                    className="w-full px-2 py-2.5 rounded-lg flex justify-normal items-center gap-2 hover:bg-muted-foreground/15 hover:cursor-pointer"
+                    disabled>
                     <RiArchiveStackFill className="h-5 w-5" />
                     Posts
-                  </div>
-                  <div className="w-full px-2 py-2.5 rounded-lg flex items-center gap-2 hover:bg-muted-foreground/15 hover:cursor-pointer">
+                  </Button>
+                  <Button
+                    variant={"ghost"}
+                    className="w-full px-2 py-2.5 rounded-lg flex justify-normal items-center gap-2 hover:bg-muted-foreground/15 hover:cursor-pointer"
+                    disabled>
                     <FaExchangeAlt className="h-5 w-5" />
                     Changelogs
-                  </div>
+                  </Button>
                 </AccordionContent>
               </AccordionItem>
             </Accordion>
@@ -73,9 +85,9 @@ export default function Sidebar() {
           </div>
         </div>
 
-        <div className="pl-4">
-          <div className="w-full px-2 py-1.5 rounded-lg flex items-center gap-2 hover:bg-muted-foreground/15 hover:cursor-pointer">
-            <Avatar className="h-9 w-9">
+        <div className="pl-4 text-sm font-semibold">
+          <div className="w-full px-2 py-1.5 rounded-lg flex items-center gap-3 hover:bg-muted-foreground/15 hover:cursor-pointer">
+            <Avatar className="h-8 w-8">
               <AvatarImage src="https://github.com/shadcn.png" />
               <AvatarFallback>CN</AvatarFallback>
             </Avatar>

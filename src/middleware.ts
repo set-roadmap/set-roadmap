@@ -36,7 +36,7 @@ export async function middleware(req: NextRequest) {
 
   // if authenticated and path is /signin then redirect to /home
   if (token?.email && path === "/signin") {
-    const homeURL = new URL("/home", req.url);
+    const homeURL = new URL("/roadmaps", req.url);
     return NextResponse.redirect(homeURL);
   }
 
