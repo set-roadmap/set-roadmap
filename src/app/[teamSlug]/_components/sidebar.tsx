@@ -23,7 +23,7 @@ export default function Sidebar() {
   return (
     <div className="h-full w-72 sticky top-0 shrink-0">
       <div className="pb-4 pt-6 h-full flex flex-col justify-between">
-        <div className="pl-4 py-2 space-y-8">
+        <div className="pl-4 py-2 space-y-8 text-sm">
           <h2
             className={cn(
               "mb-2 px-2 text-2xl font-bold tracking-wide flex items-center",
@@ -33,33 +33,33 @@ export default function Sidebar() {
           </h2>
           <div className="space-y-2">
             <div className="w-full px-2 py-2.5 rounded-lg flex items-center gap-2 hover:bg-muted-foreground/15 hover:cursor-pointer">
-              <MdOutlineRadioButtonChecked className="h-6 w-6" />
+              <MdOutlineRadioButtonChecked className="h-5 w-5" />
               Get Started
             </div>
             <div className="w-full px-2 py-2.5 bg-muted-foreground/15 rounded-lg flex items-center gap-2 hover:bg-muted-foreground/15 hover:cursor-pointer">
-              <SlDirections className="h-6 w-6" />
+              <SlDirections className="h-5 w-5" />
               Roadmaps
             </div>
             <div className="w-full px-2 py-2.5 rounded-lg flex items-center gap-2 hover:bg-muted-foreground/15 hover:cursor-pointer">
-              <LiaUserFriendsSolid className="h-6 w-6" />
+              <LiaUserFriendsSolid className="h-5 w-5" />
               Team
             </div>
 
             <Accordion type="single" collapsible>
-              <AccordionItem value="Insights">
+              <AccordionItem value="Community">
                 <AccordionTrigger className="w-full px-2 py-2.5 rounded-lg hover:bg-muted-foreground/15 hover:cursor-pointer">
                   <div className="flex items-center gap-2">
-                    <LuBarChartHorizontalBig className="h-6 w-6" />
-                    Insights
+                    <LuBarChartHorizontalBig className="h-5 w-5" />
+                    Community
                   </div>
                 </AccordionTrigger>
                 <AccordionContent className="space-y-2 px-4 py-2">
                   <div className="w-full px-2 py-2.5 rounded-lg flex items-center gap-2 hover:bg-muted-foreground/15 hover:cursor-pointer">
-                    <RiArchiveStackFill className="h-6 w-6" />
+                    <RiArchiveStackFill className="h-5 w-5" />
                     Posts
                   </div>
                   <div className="w-full px-2 py-2.5 rounded-lg flex items-center gap-2 hover:bg-muted-foreground/15 hover:cursor-pointer">
-                    <FaExchangeAlt className="h-6 w-6" />
+                    <FaExchangeAlt className="h-5 w-5" />
                     Changelogs
                   </div>
                 </AccordionContent>
@@ -67,7 +67,7 @@ export default function Sidebar() {
             </Accordion>
 
             <div className="w-full px-2 py-2.5 rounded-lg flex items-center gap-2 hover:bg-muted-foreground/15 hover:cursor-pointer">
-              <IoSettingsOutline className="h-6 w-6" />
+              <IoSettingsOutline className="h-5 w-5" />
               Settings
             </div>
           </div>
