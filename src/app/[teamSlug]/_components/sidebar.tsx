@@ -1,26 +1,15 @@
 import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/components/primitives/accordion";
-import {
   Avatar,
   AvatarFallback,
   AvatarImage,
 } from "@/components/primitives/avatar";
-import { Button } from "@/components/primitives/button";
 import { headingFont } from "@/lib/heading-font";
 import { cn } from "@/lib/utils";
 import {
-  FaExchangeAlt,
   FaSuperpowers,
-  IoExtensionPuzzleOutline,
   IoSettingsOutline,
   LiaUserFriendsSolid,
-  LuBarChartHorizontalBig,
   MdOutlineRadioButtonChecked,
-  RiArchiveStackFill,
   SlDirections,
 } from "@/components/icons";
 
@@ -50,7 +39,7 @@ export default function Sidebar() {
               Team
             </div>
 
-            <div className="w-full px-2 py-2.5 rounded-lg flex items-center gap-2 hover:bg-muted-foreground/15 hover:cursor-pointer">
+            {/* <div className="w-full px-2 py-2.5 rounded-lg flex items-center gap-2 hover:bg-muted-foreground/15 hover:cursor-pointer">
               <IoExtensionPuzzleOutline className="h-5 w-5" />
               Integrations
             </div>
@@ -80,7 +69,7 @@ export default function Sidebar() {
                   </Button>
                 </AccordionContent>
               </AccordionItem>
-            </Accordion>
+            </Accordion> */}
 
             <div className="w-full px-2 py-2.5 rounded-lg flex items-center gap-2 hover:bg-muted-foreground/15 hover:cursor-pointer">
               <IoSettingsOutline className="h-5 w-5" />
