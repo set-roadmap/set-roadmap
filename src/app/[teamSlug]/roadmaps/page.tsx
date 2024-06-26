@@ -1,7 +1,7 @@
 import React from "react";
-import Navbar from "./_components/navbar";
+import Navbar from "../_components/navbar";
 
-export default function TeamPage() {
+export default function RoadmapsPage() {
   return (
     <div className="w-full h-full bg-white border rounded-lg shadow-md">
       <Navbar>

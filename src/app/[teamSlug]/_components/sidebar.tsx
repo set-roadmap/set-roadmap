@@ -12,13 +12,17 @@ import {
 import { Button } from "@/components/primitives/button";
 import { headingFont } from "@/lib/heading-font";
 import { cn } from "@/lib/utils";
-import { FaExchangeAlt, FaPuzzlePiece, FaSuperpowers } from "react-icons/fa";
-import { IoSettingsOutline } from "react-icons/io5";
-import { LiaUserFriendsSolid } from "react-icons/lia";
-import { LuBarChartHorizontalBig } from "react-icons/lu";
-import { MdOutlineRadioButtonChecked } from "react-icons/md";
-import { RiArchiveStackFill } from "react-icons/ri";
-import { SlDirections } from "react-icons/sl";
+import {
+  FaExchangeAlt,
+  FaSuperpowers,
+  IoExtensionPuzzleOutline,
+  IoSettingsOutline,
+  LiaUserFriendsSolid,
+  LuBarChartHorizontalBig,
+  MdOutlineRadioButtonChecked,
+  RiArchiveStackFill,
+  SlDirections,
+} from "@/components/icons";
 
 export default function Sidebar() {
   return (
@@ -47,7 +51,7 @@ export default function Sidebar() {
             </div>
 
             <div className="w-full px-2 py-2.5 rounded-lg flex items-center gap-2 hover:bg-muted-foreground/15 hover:cursor-pointer">
-              <FaPuzzlePiece className="h-5 w-5" />
+              <IoExtensionPuzzleOutline className="h-5 w-5" />
               Integrations
             </div>
 

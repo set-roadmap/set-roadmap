@@ -9,7 +9,7 @@ import { FaGoogle } from "react-icons/fa";
 
 export default function SignInPage() {
   const handleSignInWithGoogle = async () => {
-    await signIn("google", { callbackUrl: "/roadmaps" });
+    await signIn("google", { callbackUrl: "/team-slug/roadmaps" });
   };
 
   return (
