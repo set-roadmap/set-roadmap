@@ -5,3 +5,4 @@ export { LuBarChartHorizontalBig } from "react-icons/lu";
 export { MdOutlineRadioButtonChecked } from "react-icons/md";
 export { RiArchiveStackFill } from "react-icons/ri";
 export { SlDirections } from "react-icons/sl";
+export { BsStars } from "react-icons/bs";
