@@ -1,3 +1,5 @@
+"use client";
+
 import {
   Avatar,
   AvatarFallback,
@@ -12,6 +14,7 @@ import {
   MdOutlineRadioButtonChecked,
   SlDirections,
 } from "@/components/icons";
+import { signOut } from "next-auth/react";
 
 export default function Sidebar() {
   return (
@@ -79,7 +82,9 @@ export default function Sidebar() {
         </div>
 
         <div className="pl-4 text-sm font-semibold">
-          <div className="w-full px-2 py-1.5 rounded-lg flex items-center gap-3 hover:bg-muted-foreground/15 hover:cursor-pointer">
+          <div
+            onClick={() => signOut()}
+            className="w-full px-2 py-1.5 rounded-lg flex items-center gap-3 hover:bg-muted-foreground/15 hover:cursor-pointer">
             <Avatar className="h-8 w-8">
               <AvatarImage src="https://github.com/shadcn.png" />
               <AvatarFallback>CN</AvatarFallback>

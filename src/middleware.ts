@@ -26,7 +26,7 @@ export async function middleware(req: NextRequest) {
   };
 
   // if not authenticated and path is internal home then redirect to /signin
-  if (!token?.email && path !== "/signin") {
+  if (!token?.email && path !== "/" && path !== "/signin") {
     const loginURL = new URL("/signin", req.url);
     if (path !== "/") {
       loginURL.searchParams.set("next", encodeURIComponent(path));

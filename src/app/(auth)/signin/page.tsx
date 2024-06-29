@@ -5,11 +5,18 @@ import { headingFont } from "@/lib/heading-font";
 import { cn } from "@/lib/utils";
 import { signIn } from "next-auth/react";
 import Link from "next/link";
+import { useParams } from "next/navigation";
 import { FaGoogle } from "react-icons/fa";
 
 export default function SignInPage() {
+  const { next } = useParams() as { next?: string };
+
+  console.log(next);
+
   const handleSignInWithGoogle = async () => {
-    await signIn("google", { callbackUrl: "/team-slug/roadmaps" });
+    await signIn("google", {
+      ...(next && next.length > 0 ? { callbackUrl: next } : {}),
+    });
   };
 
   return (
